@@ -1,1 +1,1 @@
-print(Deb Python)
+print("Deb Python")
