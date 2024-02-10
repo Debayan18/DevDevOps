@@ -1,0 +1,11 @@
+Run from agent command line: (Unix) 
+curl -sO http://34.170.91.64:8080/jnlpJars/agent.jar
+
+java -jar agent.jar -url http://34.170.91.64:8080/ -secret b0dba748e949785077620832f3418a1cdba21f19ea9812867161179c77c80795 -name WindowsSpringBoot -workDir "C:\JenkinsWorkspace"
+
+
+
+Run from agent command line: (Windows) 
+curl.exe -sO http://34.170.91.64:8080/jnlpJars/agent.jar
+
+java -jar agent.jar -url http://34.170.91.64:8080/ -secret b0dba748e949785077620832f3418a1cdba21f19ea9812867161179c77c80795 -name WindowsSpringBoot -workDir "C:\JenkinsWorkspace"
