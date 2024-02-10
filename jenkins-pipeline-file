@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'"
                 sh 'python3 --version'
-                sh 'java --version
+                sh 'java --version'
             }
         }
 
