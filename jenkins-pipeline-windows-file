@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    stages {
+        stage('Jenkins File Clonning from GIT') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
+            }
+        }
+
+        stage('Git Branch | Python Version | Java Version') {
+            steps {
+                echo "git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'"
+                sh 'python3 --version'
+                sh 'java --version'
+            }
+        }
+
+        stage('Compile JAVA') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
+                sh 'javac dhar.java'
+            }
+        }
+  
+        stage('Run JAVA') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
+                sh 'java dhar'
+            }
+        }
+
+        stage('Run Python') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
+                sh 'python3 deb.py'
+            }
+        }
+    }
+}
