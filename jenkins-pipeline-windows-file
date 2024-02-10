@@ -10,29 +10,29 @@ pipeline {
         stage('Git Branch | Python Version | Java Version') {
             steps {
                 echo "git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'"
-                sh 'python3 --version'
-                sh 'java --version'
+                bat 'python --version'
+                bat 'java --version'
             }
         }
 
         stage('Compile JAVA') {
             steps {
                 git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
-                sh 'javac dhar.java'
+                bat 'javac dhar.java'
             }
         }
   
         stage('Run JAVA') {
             steps {
                 git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
-                sh 'java dhar'
+                bat 'java dhar'
             }
         }
 
         stage('Run Python') {
             steps {
                 git branch: 'main', url: 'https://github.com/Debayan18/DevDevOps.git'
-                sh 'python3 deb.py'
+                bat 'python deb.py'
             }
         }
     }
